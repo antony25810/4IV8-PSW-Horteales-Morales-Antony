@@ -1,8 +1,8 @@
 :root{
-    --body-bg-color: #d3c188;
-    --text-color: #65a7a1;
-    --hr-color: rgb(78, 149, 167);
-    --red: red;
+    --body-bg-color: #3c3b44;
+    --text-color: #237e76;
+    --hr-color: rgb(173, 232, 240);
+    --red: rgb(65, 187, 48);
 }
 
 *{
@@ -83,27 +83,27 @@ hr{
 
 /*animaciones*/
 
-.menu[data-animation="to-top"] a span:last-child{
+.menu[data-animation="to-top"] a:hover span:last-child{
     transform: translateY(100%);
 }
 
-.menu[data-animation="to-top"] a span:first-child{
+.menu[data-animation="to-top"] a:hover span:first-child{
     transform: translateY(-100%);   
 }
 
-.menu[data-animation="to-right"] a span:last-child{
+.menu[data-animation="to-right"] a:hover span:last-child{
     transform: translateX(100%);
 }
 
-.menu[data-animation="to-right"] a span:first-child{
+.menu[data-animation="to-right"] a:hover span:first-child{
     transform: translateX(-100%);   
 }
 
-.menu[data-animation="to-left"] a span:last-child{
+.menu[data-animation="to-left"] a:hover span:last-child{
     transform: translateX(100%);
 }
 
-.menu[data-animation="to-left"] a span:first-child{
+.menu[data-animation="to-left"] a:hover span:first-child{
     transform: translateX(-100%);   
 }
 
