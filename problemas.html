@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas</title>
+    <script src="JS/problemas.js"></script>
+    <link rel="stylesheet" href="./CSS/problemas_js.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li>
+                <a href="#inversion">Inversión</a>
+            </li>
+            <li>
+                <a href="#vendedor">Vendedor</a>
+            </li>
+            <li>
+                <a href="#precio_tienda">Precio de la tienda</a>
+            </li>
+            <li>
+                <a href="#calificacion">Calificación</a>
+            </li>
+            <li>
+                <a href="#porcentaje">Porcentaje de alumnos</a>
+            </li>
+            <li>
+                <a href="#edad">Edad</a>
+            </li>
+            <li>
+                <a href="#lectura">Lectura de 2 números</a>
+            </li>
+            <li>
+                <a href="#numero_mayor">Número mayor</a>
+            </li>
+            <li>
+                <a href="#trabajador">Trabajador</a>
+            </li>
+            <li>
+                <a href="#utilidad">Utilidad del trabajador</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="principal">
+        <h2 id="inversion">Inversión</h2>
+        <form method="post" name="problema1">
+            <table class="tabla" style="margin: 0 auto;">
+                <tr>
+                    <td>Introduce el capital que vas a invertir</td>
+                    <td><input type="text" name="problema1_cantidad" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema1_enviar" onclick="problema1_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Dinero ganado despues de un mes</td>
+                    <td><input type="text" name="problema1_resultado" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema1_borrar" onclick="problema1_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <br>
+        <h2 id="vendedor">Vendedor</h2>
+        <p>Sueldo base = $5000</p>
+        <form method="post" name="problema2" style="margin: 0 auto;">
+            <table class="tabla">
+                <tr>
+                    <td>Introduce el total de la venta 1</td>
+                    <td><input type="text" name="problema2_cantidad1" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduce el total de la venta 2</td>
+                    <td><input type="text" name="problema2_cantidad2" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduce el total de la venta 3</td>
+                    <td><input type="text" name="problema2_cantidad3" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema2_enviar" onclick="problema2_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Comision por las ventas</td>
+                    <td><input type="text" name="problema2_resultado1" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Sueldo total</td>
+                    <td><input type="text" name="problema2_resultado2" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema2_borrar" onclick="problema2_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h2 id="precio_tienda">Precio de la tienda</h2>
+        <form method="post" name="problema3">
+            <table class="tabla">
+                <tr>
+                    <td>Introduce el total de la compra</td>
+                    <td><input type="text" name="problema3_cantidad" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema3_enviar" onclick="problema3_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>El total de la compra con el descuento incluido</td>
+                    <td><input type="text" name="problema3_resultado" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema3_borrar" onclick="problema3_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h2 id="calificacion">Calificación :(</h2>
+        <form method="post" name="problema4">
+            <table class="tabla">
+                <tr>
+                    <td>Introduce la calificacion del primer parcial</td>
+                    <td><input type="text" name="problema4_cantidad1" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduce la calificacion del segundo parcial</td>
+                    <td><input type="text" name="problema4_cantidad2" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduce la calificacion del tercer parcial</td>
+                    <td><input type="text" name="problema4_cantidad3" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduce la calificacion del examen final</td>
+                    <td><input type="text" name="problema4_cantidad4" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduce la calificacion del trabajo final</td>
+                    <td><input type="text" name="problema4_cantidad5" onkeypress="return validar(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema4_enviar" onclick="problema4_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>La calificacion final</td>
+                    <td><input type="text" name="problema4_resultado" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema4_borrar" onclick="problema4_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h2 id="porcentaje">Pocentaje de alumnos</h2>
+        <form method="post" name="problema5">
+            <table class="tabla">
+                <tr>
+                    <td>Ingresa el numero de hombres</td>
+                    <td><input type="text" name="problema5_cantidad1" onkeypress="return validar2(event)"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Ingresa el numero de mujeres</td>
+                    <td><input type="text" name="problema5_cantidad2" onkeypress="return validar2(event)"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema5_enviar" onclick="problema5_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>El porcentaje de alumnos hombres</td>
+                    <td><input type="text" name="problema5_resultado1" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td>El porcentaje de alumnos mujeres</td>
+                    <td><input type="text" name="problema5_resultado2" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema5_borrar" onclick="problema5_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h2 id="edad">Edad</h2>
+        <form method="post" name="problema6">
+            <table class="tabla">
+                <tr>
+                    <td>Introduce el año de nacimiento</td>
+                    <td><input type="text" name="problema6_cantidad" onkeypress="return validar2(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema6_enviar" onclick="problema6_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td><input type="text" name="problema6_resultado" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema6_borrar" onclick="problema6_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h2 id="lectura">Lectura de 2 números</h2>
+        <form method="post" name="problema7">
+            <table class="tabla">
+                <tr>
+                    <td>Ingresa el primer numero</td>
+                    <td><input type="text" name="problema7_cantidad1" onkeypress="return validar3(event)"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Ingresa el segundo numero</td>
+                    <td><input type="text" name="problema7_cantidad2" onkeypress="return validar3(event)"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema7_enviar" onclick="problema7_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>El resultado</td>
+                    <td><input type="text" name="problema7_resultado" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema7_borrar" onclick="problema7_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h2 id="numero_mayor">Número mayor</h2>
+        <form method="post" name="problema8">
+            <table class="tabla">
+                <tr>
+                    <td>Ingresa el primer numero</td>
+                    <td><input type="text" name="problema8_cantidad1" onkeypress="return validar3(event)"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Ingresa el segundo numero</td>
+                    <td><input type="text" name="problema8_cantidad2" onkeypress="return validar3(event)"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Ingresa el tercer numero</td>
+                    <td><input type="text" name="problema8_cantidad3" onkeypress="return validar3(event)"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema8_enviar" onclick="problema8_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>El numero mayor</td>
+                    <td><input type="text" name="problema8_resultado" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema8_borrar" onclick="problema8_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h2 id="trabajador">Trabajador</h2>
+        <p>Hora normal = $100</p>
+        <form method="post" name="problema9">
+            <table class="tabla">
+                <tr>
+                    <td>Introduce las horas trabajadas</td>
+                    <td><input type="text" name="problema9_cantidad" onkeypress="return validar2(event)" class="campos">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema9_enviar" onclick="problema9_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Paga total</td>
+                    <td><input type="text" name="problema9_resultado" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema9_borrar" onclick="problema9_funcion_borrar()"
+                            class="campos"></td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h2 id="utilidad">Utilidad del trabajador</h2>
+        <p>Salario = $50000</p>
+        <form method="post" name="problema10">
+            <table class="tabla">
+                <tr>
+                    <td>Introduce el año en que entraste a trabajar</td>
+                    <td><input type="text" name="problema10_cantidad" onkeypress="return validar2(event)"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="ENVIAR" name="problema10_enviar" onclick="problema10_funcion()"
+                            class="campos"></td>
+                </tr>
+                <tr>
+                    <td>Utilidad</td>
+                    <td><input type="text" name="problema10_resultado" readonly="readonly" class="campos"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="BORRAR" name="problema10_borrar"
+                            onclick="problema10_funcion_borrar()" class="campos"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <footer class="pies">
+        <h2>Hecha por Horteales Morales Antony</h2>
+        <a href="index.html" style="color: rgb(432, 150, 54);">
+            <h3>Página principal</h3>
+        </a>
+    </footer>
+</body>
+
+</html>
