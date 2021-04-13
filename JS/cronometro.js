@@ -4,7 +4,7 @@ let temporizador = document.getElementById('temporizador');
 let iniciar = document.getElementById('iniciar');
 let resetear = document.getElementById('resetear');
 let grabar = document.getElementById('grabar');
-let almacenartiempos = document.getElementById('almacenartiempos');
+let almacenarTiempos = document.getElementById('almacenarTiempos');
 
 let tiempo = 0;
 let intervalo = 0;
@@ -36,12 +36,12 @@ function resetearContador(){
     tiempo = 0;
     temporizador.innerHTML = tiempo + '0.00';
     clearInterval(intervalo);
-    while(almacenartiempos.firstChild){
-        almacenartiempos.removeChild(almacenartiempos.firstChild);
+    while(almacenarTiempos.firstChild){
+        almacenarTiempos.removeChild(almacenarTiempos.firstChild);
     }
 }
 
-function grabar(){
+function grabarContador(){
     if(temporizador.textContent === '0.00'){
         console.log('click para iniciar el cronometro');
     }else{
@@ -51,6 +51,6 @@ function grabar(){
         <li> Tiempo : ${tiempo.toFixed(2)} </li>
 
         `;
-        almacenartiempos.appendChild(p);
+        almacenarTiempos.appendChild(p);
     }
 }
