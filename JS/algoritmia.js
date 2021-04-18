@@ -74,7 +74,7 @@ function validarn(e){
     var teclado = (document.all)?e.keyCode:e.which;
     if(teclado == 8)return true;
 
-    var patron = /[0-9\d .]/;
+    var patron = /[QWERTYUIOPASDFGHJKLÑZXCVBNM\d .]/;
 
     var prueba = String.fromCharCode(teclado);
     return patron.test(prueba);
